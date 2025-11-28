@@ -26,11 +26,11 @@
     </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
   </_.fcp.AnimationOnByDefault.false...style>
   <datasources>
-    <datasource caption='josh_stram_db' inline='true' name='federated.1i76i1v0s3ydeb16fbqkg0x2l3fv' version='18.1'>
+    <datasource caption='stock_stream_db' inline='true' name='federated.1i76i1v0s3ydeb16fbqkg0x2l3fv' version='18.1'>
       <connection class='federated'>
         <named-connections>
           <named-connection caption='athena.us-east-1.amazonaws.com' name='athena.0e8cy761v5lczs0zy8mh21mnp2nu'>
-            <connection class='athena' dbname='AwsDataCatalog' one-time-sql='' port='443' schema='josh_stram_db' server='athena.us-east-1.amazonaws.com' username='AKIA3QQSRGFHFFO6LN6V' warehouse='s3://streaming-project/transformed-data/' workgroup-auth-mode='as-is'>
+            <connection class='athena' dbname='AwsDataCatalog' one-time-sql='' port='443' schema='stock_stream_db' server='athena.us-east-1.amazonaws.com' username='AKIA3QQSRGFHFFO6LN6V' warehouse='s3://streaming-project/transformed-data/' workgroup-auth-mode='as-is'>
               <connection-customization class='athena' enabled='false' version='18.1'>
                 <vendor name='athena' />
                 <driver name='athena' />
@@ -158,8 +158,8 @@
             </connection>
           </named-connection>
         </named-connections>
-        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='athena.0e8cy761v5lczs0zy8mh21mnp2nu' name='stock' table='[josh_stram_db].[stock]' type='table' />
-        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='athena.0e8cy761v5lczs0zy8mh21mnp2nu' name='stock' table='[josh_stram_db].[stock]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='athena.0e8cy761v5lczs0zy8mh21mnp2nu' name='stock' table='[stock_stream_db].[stock]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='athena.0e8cy761v5lczs0zy8mh21mnp2nu' name='stock' table='[stock_stream_db].[stock]' type='table' />
         <refresh increment-key='' incremental-updates='false' />
         <metadata-records>
           <metadata-record class='column'>
@@ -394,11 +394,11 @@
       <column-instance column='[low]' derivation='Sum' name='[sum:low:qk]' pivot='key' type='quantitative' />
       <column-instance column='[open]' derivation='Sum' name='[sum:open:qk]' pivot='key' type='quantitative' />
       <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
-        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/omole/OneDrive/Documents/My Tableau Repository/Datasources/josh_stram_db.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='03/05/2023 06:47:27 AM' username='tableau_internal_user'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/omole/OneDrive/Documents/My Tableau Repository/Datasources/stock_stream_db.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='03/05/2023 06:47:27 AM' username='tableau_internal_user'>
           <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
           <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
           <refresh increment-key='' incremental-updates='false'>
-            <refresh-event add-from-file-path='josh_stram_db' increment-value='%null%' refresh-type='create' rows-inserted='340' timestamp-start='2023-03-05 06:47:22.671' />
+            <refresh-event add-from-file-path='stock_stream_db' increment-value='%null%' refresh-type='create' rows-inserted='340' timestamp-start='2023-03-05 06:47:22.671' />
           </refresh>
           <metadata-records>
             <metadata-record class='column'>
@@ -644,7 +644,7 @@
         <objects>
           <object caption='stock' id='stock_547C030E70944B1E8A8AF25FF927B16E'>
             <properties context=''>
-              <relation connection='athena.0e8cy761v5lczs0zy8mh21mnp2nu' name='stock' table='[josh_stram_db].[stock]' type='table' />
+              <relation connection='athena.0e8cy761v5lczs0zy8mh21mnp2nu' name='stock' table='[stock_stream_db].[stock]' type='table' />
             </properties>
             <properties context='extract'>
               <relation name='Extract' table='[Extract].[Extract]' type='table' />
@@ -666,7 +666,7 @@
       <table>
         <view>
           <datasources>
-            <datasource caption='josh_stram_db' name='federated.1i76i1v0s3ydeb16fbqkg0x2l3fv' />
+            <datasource caption='stock_stream_db' name='federated.1i76i1v0s3ydeb16fbqkg0x2l3fv' />
           </datasources>
           <datasource-dependencies datasource='federated.1i76i1v0s3ydeb16fbqkg0x2l3fv'>
             <column caption='Spread Open/close' datatype='real' name='[Calculation_1554586362370600963]' role='measure' type='quantitative'>
@@ -805,7 +805,7 @@
       <table>
         <view>
           <datasources>
-            <datasource caption='josh_stram_db' name='federated.1i76i1v0s3ydeb16fbqkg0x2l3fv' />
+            <datasource caption='stock_stream_db' name='federated.1i76i1v0s3ydeb16fbqkg0x2l3fv' />
           </datasources>
           <datasource-dependencies datasource='federated.1i76i1v0s3ydeb16fbqkg0x2l3fv'>
             <column caption='Spread Open/close' datatype='real' name='[Calculation_1554586362370600963]' role='measure' type='quantitative'>
@@ -971,7 +971,7 @@
           </zone>
           <zone forceUpdate='true' h='3571' id='62' type-v2='text' w='99064' x='468' y='893'>
             <formatted-text>
-              <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='15'>Created by Joshua Omolewa</run>
+              <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='15'></run>
             </formatted-text>
             <zone-style>
               <format attr='border-color' value='#000000' />
@@ -996,7 +996,7 @@
               <zone h='98214' id='65' param='vert' type-v2='layout-flow' w='99064' x='468' y='893'>
                 <zone forceUpdate='true' h='3571' id='62' type-v2='text' w='99064' x='468' y='893'>
                   <formatted-text>
-                    <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='15'>Created by Joshua Omolewa</run>
+                    <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='15'></run>
                   </formatted-text>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
