@@ -2,4 +2,4 @@
 
 import subprocess
 
-subprocess.run(['great_expectations', 'checkpoint', 'run', 'joshua-cp'])
+subprocess.run(['great_expectations', 'checkpoint', 'run', 'stream-cp'])

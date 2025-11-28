@@ -1,6 +1,6 @@
 {
   "data_asset_type": null,
-  "expectation_suite_name": "josh_stram_db.stock.data_validatation_final",
+  "expectation_suite_name": "stock_stream_db.stock.data_validatation_final",
   "expectations": [
     {
       "expectation_type": "expect_table_column_count_to_be_between",
@@ -45,9 +45,9 @@
     "citations": [
       {
         "batch_request": {
-          "data_asset_name": "josh_stram_db.stock",
+          "data_asset_name": "stock_stream_db.stock",
           "data_connector_name": "default_inferred_data_connector_name",
-          "datasource_name": "joshua_db",
+          "datasource_name": "stock_db",
           "limit": 1000
         },
         "citation_date": "2023-02-28T00:39:05.007807Z",

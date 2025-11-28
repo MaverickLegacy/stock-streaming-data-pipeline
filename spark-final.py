@@ -8,7 +8,7 @@ from pyspark.sql.functions import *
 
 # This is boostrap server for MSK i.e. brokers
 
-BOOTSTRAP_SERVERS='b-3.joshuamsk.yxngi1.c14.kafka.us-east-1.amazonaws.com:9092,b-2.joshuamsk.yxngi1.c14.kafka.us-east-1.amazonaws.com:9092,b-1.joshuamsk.yxngi1.c14.kafka.us-east-1.amazonaws.com:9092'
+BOOTSTRAP_SERVERS='b-3.stockstreammsk.yxngi1.c14.kafka.us-east-1.amazonaws.com:9092,b-2.stockstreammsk.yxngi1.c14.kafka.us-east-1.amazonaws.com:9092,b-1.stockstreammsk.yxngi1.c14.kafka.us-east-1.amazonaws.com:9092'
 
 
 #HUDI CONFIGURATION SETTINGS

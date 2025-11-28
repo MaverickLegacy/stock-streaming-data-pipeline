@@ -9,7 +9,7 @@ def del_all_livy_batches(livy_endpoint):
     
     try:
         # Get the list of all batches
-        #sample payload from livy {"from":0,"total":1,"sessions":[{"id":19,"name":"josh-stream-app","owner":null}
+        #sample payload from livy {"from":0,"total":1,"sessions":[{"id":19,"name":"stock-stream-app","owner":null}
         response = requests.get(batches_endpoint)
         response.raise_for_status() #to check request was successful
         batches = response.json()["sessions"]

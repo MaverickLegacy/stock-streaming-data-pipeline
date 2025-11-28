@@ -1,15 +1,15 @@
 {
   "data_asset_type": null,
-  "expectation_suite_name": "josh_stram_db.stock.josh-validation2",
+  "expectation_suite_name": "stock_stream_db.stock.validation2",
   "expectations": [],
   "ge_cloud_id": null,
   "meta": {
     "citations": [
       {
         "batch_request": {
-          "data_asset_name": "josh_stram_db.stock",
+          "data_asset_name": "stock_stream_db.stock",
           "data_connector_name": "default_inferred_data_connector_name",
-          "datasource_name": "joshua_db",
+          "datasource_name": "stock_db",
           "limit": 1000
         },
         "citation_date": "2023-02-28T01:54:09.717334Z",

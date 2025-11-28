@@ -1,5 +1,3 @@
-#created by joshua Omolewa
-
 #importing important libraries
 import airflow
 from airflow import DAG
@@ -12,7 +10,7 @@ import json
 import time
 
 default_args = {
-    'owner': 'joshua_data_engineer',
+    'owner': 'data_engineer',
     'depends_on_past': False,
     'start_date': airflow.utils.dates.days_ago(0),   #defining when airflow starts executing the task 
     'email': ['airflow_info@gmail.com'],  #email nottifcation settings
